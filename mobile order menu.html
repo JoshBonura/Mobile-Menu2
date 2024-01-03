@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jimmy's Diner Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="header-image" src="header.png" alt="Header">
+    <h1 id="header-title">Jimmy's Diner Menu</h1>
+    <h2 id="header-subtitle">The best burgers and pizza in town</h2>
+    <div class="item-1">
+        <img class="image" src="pizza.png" alt="Pizza">
+        <div class="item-text">
+            <h2>Pizza</h2>
+            <p>Pepperoni, mushroom, mozzarella</p>
+            <h3>$14</h3>
+        </div>
+        <img src="add-btn.png" class="add-btn" onclick="addToOrder('pizza')">
+    </div>
+    <div class="item-2">
+        <img class="image"src="hamburger.png" alt="Hamburger">
+        <div class="item-text">
+            <h2>Hamburger</h2>
+            <p>Beef, cheese, lettuce</p>
+            <h3>$12</h3>
+        </div>
+        <img src="add-btn.png" class="add-btn" onclick="addToOrder('hamburger')">
+    </div>
+    <div class="item-3">
+        <img class="image"src="beer.png" alt="Beer">
+        <div class="item-text">
+        <h2>Beer</h2>
+        <p>Grain, hops, yeast, water</p>
+        <h3>$12</h3>
+        </div>
+        <img src="add-btn.png" class="add-btn" onclick="addToOrder('beer')">
+    </div>
+
+    <div class="order-section">
+        <h2 class="order-text">Your Order:</h2>
+        <div id="orderList"></div>
+        <h3>Total: $<span id="total">0.00</span></h3>
+        <button id="completeOrderButton" style="display: none;">Complete Order</button>
+    </div>
+    <div id="paymentModal" style="display: none;">
+        <div id="validationMessage" style="color: red;">
+        </div><br />
+        <label for="nameInput">Name:</label><br />
+        <input type="text" id="nameInput" /><br />
+        <label for="cardNumberInput">Card Number:</label><br />
+        <input type="text" id="cardNumberInput" /><br />
+        <label for="cvvInput">CVV:</label><br />
+        <input type="text" id="cvvInput" /><br />
+        <div class="paymentButtons">
+            <button id="payButton">Pay</button>
+            <button id="backToCartButton">Back to Cart</button> 
+        </div>
+    </div>
+    <div id="thankYouText" style="display: none;">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
